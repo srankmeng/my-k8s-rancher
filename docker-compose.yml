@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 services:
   ranchers:
     image: rancher/rancher:v2.8.3

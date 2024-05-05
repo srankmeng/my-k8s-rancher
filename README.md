@@ -9,6 +9,8 @@ Steps
 
     2.1 [Create new cluster](#21-create-new-cluster)
 
+    2.2 [Import exist cluster](#22-import-exist-cluster)
+
 3. [Deploy Application](#3-deploy-application)
 4. [Monitoring](#4-monitoring)
 5. [Rancher Configuration](#5-rancher-configuration)
@@ -95,6 +97,19 @@ Checking nodes
 Done !!
 
 ---
+
+### 2.2 Import exist cluster
+2.2.1 Click `Import Existing` button
+
+![rancher_import_cluster01](./images/rancher_import_cluster01.png)
+
+2.2.2 Next choose cluster provider, in this case we will Import any Kubernetes cluster so choose `Generic`
+
+2.1.3 Then input Cluster Name and click `Create` button
+
+It will go to `Registraton` tab. Copy command in this page then paste to master node 
+
+Checking node in Rancher web
 
 ## 3. Deploy Application
 
