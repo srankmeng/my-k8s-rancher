@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ranchers:
+    image: rancher/rancher:v2.8.3
+    container_name: my-rancher
+    privileged: true
+    # volumes:
+    #   - /opt/rancher:/var/lib/rancher
+    #   - ${HOMEDIR}/certs/rancher:/var/lib/ca-certificates
+    restart: unless-stopped
+    ports:
+      - 8443:443
+      - 8080:80
