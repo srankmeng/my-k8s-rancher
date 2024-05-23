@@ -27,7 +27,7 @@ You can run by docker or docker compose
 
 #### Option1: Run by Docker
 ```
-docker run -d --restart=unless-stopped --name my-rancher -p 8080:80 -p 8443:443 --privileged rancher/rancher:v2.8.3
+docker run -d --restart=unless-stopped --name my-rancher -p 8080:80 -p 8443:443  -v ./opt/rancher:/var/lib/rancher -v ./certs/rancher:/var/lib/ca-certificates --privileged rancher/rancher:v2.8.3
 ```
 
 then go to http://localhost:8080
@@ -42,8 +42,8 @@ services:
     container_name: my-rancher
     privileged: true
     volumes:
-      - /opt/rancher:/var/lib/rancher
-      - ${HOMEDIR}/certs/rancher:/var/lib/ca-certificates
+      - ./opt/rancher:/var/lib/rancher
+      - ./certs/rancher:/var/lib/ca-certificates
     restart: unless-stopped
     ports:
       - 8443:443
